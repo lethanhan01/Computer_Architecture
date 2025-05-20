@@ -1,0 +1,6 @@
+.data
+test: .asciz "Hello World"
+.text
+	li a7, 4		#a7 = 4
+	la a0, test	#a0= địa chỉ chuỗi
+	ecalls

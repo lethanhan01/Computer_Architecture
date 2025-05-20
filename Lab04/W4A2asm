@@ -1,0 +1,6 @@
+.text
+	li s0, 1234567899
+	srli s1, s0, 24		#MSB cua s0
+	andi s2, s0, 0xffffff00 	#xoa LSB
+	ori s3, s0, 0x0000000ff 	#thiet lap LSB
+	andi s4, s0, 0x00000000 	#xoa S0

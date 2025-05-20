@@ -1,0 +1,13 @@
+.text
+	li s1, -9999999999
+	li s2, -1999999999
+	addi t0, t0, 0
+	add s3, s1, s2	#s3 = s1 + s2
+	xor t1, s3, s1	#so sanh dau cua s3 voi s1
+	xor t2, s3, s2	#so sanh dau cua s3 voi s2
+	blt t1, zero, OVERFLOW
+	blt t2, zero, OVERFLOW
+	j END
+OVERFLOW:
+	addi t0, t0, 1
+END:
